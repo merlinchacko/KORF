@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Code Assignment</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+	<!-- SCROLLS -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+	
+	<!-- SPELLS -->
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.6.0.js"></script>
+    <script src="/js/controller.js"></script> 
+  	
+  	<!-- Styleheets -->
+    <link rel="stylesheet" href="/css/style.css"/>
+    
+</head>
+<body ng-app="imageApp">
+	<!-- <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">Image Service</a>
+      </div>
+    </div>
+  </nav> -->
+  <div class="jumbotron text-center">
+        <div class="container" ng-controller="GetController">
+            <div class="row alert alert-danger alert-dismissable" role="alert" ng-show="errMessage.length > 0">
+							<a ng-click="errMessage = null" class="close" aria-label="close">&times;</a>
+							{{errMessage}}
+			</div> 
+			<div class="row">
+				<div class="col-lg-12">
+					<form>
+						<div class="form-group ">
+							<div class="col-lg-12">
+								<span class="btn btn-primary">
+									<input type="file" name="myImage" accept="image/x-png,image/gif,image/jpeg" />
+								</span>
+								<button class="btn btn-primary" ng-click="download()">Upload</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+        </div>
+    </div>  
+</body>
+</html>
