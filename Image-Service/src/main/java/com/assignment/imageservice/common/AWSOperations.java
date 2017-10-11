@@ -31,10 +31,9 @@ public class AWSOperations {
 	private AWSOperations() {
 		
 		try {
-			
 			s3Client = new AmazonS3Client(new PropertiesCredentials(ImageServiceApplication.class.getResourceAsStream("AwsCredentials.properties")));
 		} catch (IOException e) {
-			
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
